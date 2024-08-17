@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #536493;
+}
+.container{
+    margin: 5em auto 0;
+    width: 45%;
+    padding: 3em 2em 2em;
+    border-radius: 0.4em;
+    background-color: #FFF1DB;
+}
+.searchSection{
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 1.5em;
+}
+.searchSection .input{
+    flex: 1;
+    border: none;
+    background: transparent;
+    border-bottom: 3px solid #536493;
+    outline: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 0.3em 0.2em;
+}
+.searchSection .searchButton{
+    padding: 0.4em 0.6em;
+    font-size: 1.1em;
+    background-color: #EF5A6F;
+    color: #FFF1DB;
+    border-radius: 0.4em;
+    border: 1px solid #D4BDAC;
+}
+.displaySection .word{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5em;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+.displaySection .word h3{
+    font-size: 2em;
+}
+.displaySection .word button{
+    font-size: 1.3em;
+    padding: 0.2em;
+    border: none;
+    color: #EF5A6F;
+    background-color: transparent;
+    margin: 0em 1em 0.3em 1em;
+}
+.displaySection .word button.disable{
+    display: none;
+}
+.displaySection .wordDetails{
+    display: flex;
+    gap: 0.8em;
+    color: #f58421;
+    margin-top: -0.3em;
+}
+.displaySection .wordMeaning{
+    margin: 1em 0 1em 0;
+}
+.displaySection .wordExample{
+    padding: 0.4em 0.8em ;
+    border: 1px solid #536493;
+    border-radius: 5em;
+}
+.displaySection .wordExample.disable{
+    padding: 0;
+    border: none;
+}
+.displaySection .errorSentence{
+    margin: 1.5em auto 0;
+    text-align: center;
+    width: 70%;
+    color: #e57373;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 767px){
+    .container{
+        width: 90%;
+    }
+    .searchSection{
+        flex-direction: column; 
+    }
+}
